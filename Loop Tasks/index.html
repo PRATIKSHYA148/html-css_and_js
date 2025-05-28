@@ -1,1 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tasks 1 t0 10</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+    h2 {
+      color: #333;
+    }
+    .task {
+      background: #fff;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-left: 5px solid #007acc;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    pre {
+      background: #eee;
+      padding: 10px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <h1>JavaScript Loop Tasks</h1>
+
+  <div class="task">
+    <h2>Task 1: Print Even Numbers from 1 to 20</h2>
+    <pre id="task1"></pre>
+  </div>
+
+  <div class="task">
+    <h2>Task 2: Print Numbers 10 to 1</h2>
+    <pre id="task2"></pre>
+  </div>
+
+  <div class="task">
+    <h2>Task 3: Sum of Numbers from 1 to 100</h2>
+    <pre id="task3"></pre>
+  </div>
+
+  <div class="task">
+    <h2>Task 4: Loop Through an Array</h2>
+    <pre id="task4"></pre>
+  </div>
+
+  <div class="task">
+    <h2>Task 5: Multiply Elements by 2</h2>
+    <pre id="task5"></pre>
+  </div>
+
+  <div class="task">
+    <h2>Task 6: Greeting Using forEach</h2>
+    <pre id="task6"></pre>
+  </div>
+
+  <div class="task">
+    <h2>Task 7: Count Vowels in a String</h2>
+    <pre id="task7"></pre>
+  </div>
+
+  <div class="task">
+    <h2>Task 8: Print Even Numbers Using forEach</h2>
+    <pre id="task8"></pre>
+  </div>
+
+  <div class="task">
+    <h2>Task 9: Squares Using forEach</h2>
+    <pre id="task9"></pre>
+  </div>
+
+  <div class="task">
+    <h2>Task 10: Loop Through Object Keys</h2>
+    <pre id="task10"></pre>
+  </div>
+
+  <script>
+    // Task 1
+    let result1 = '';
+    for (let i = 1; i <= 20; i++) {
+      if (i % 2 === 0) result1 += i + ' ';
+    }
+    document.getElementById('task1').textContent = result1;
+
+    // Task 2
+    let result2 = '';
+    for (let i = 10; i >= 1; i--) {
+      result2 += i + ' ';
+    }
+    document.getElementById('task2').textContent = result2;
+
+    // Task 3
+    let sum = 0;
+    for (let i = 1; i <= 100; i++) {
+      sum += i;
+    }
+    document.getElementById('task3').textContent = `Sum: ${sum}`;
+
+    // Task 4
+    const numbers = [3, 6, 9, 12];
+    let result4 = '';
+    for (let i = 0; i < numbers.length; i++) {
+      result4 += numbers[i] + '\n';
+    }
+    document.getElementById('task4').textContent = result4;
+
+    // Task 5
+    let result5 = '';
+    for (let i = 0; i < numbers.length; i++) {
+      result5 += (numbers[i] * 2) + '\n';
+    }
+    document.getElementById('task5').textContent = result5;
+
+    // Task 6
+    const names = ['Panda', 'cat', 'Dog'];
+    let result6 = '';
+    names.forEach(name => {
+      result6 += `Hello, ${name}!\n`;
+    });
+    document.getElementById('task6').textContent = result6;
+
+    // Task 7
+    const testString = "Hello World!";
+    let vowels = 'aeiouAEIOU';
+    let vowelCount = 0;
+    for (let char of testString) {
+      if (vowels.includes(char)) vowelCount++;
+    }
+    document.getElementById('task7').textContent = `Vowels in "${testString}": ${vowelCount}`;
+
+    // Task 8
+    const moreNumbers = [2, 5, 8, 11, 14];
+    let result8 = '';
+    moreNumbers.forEach(num => {
+      if (num % 2 === 0) result8 += num + ' ';
+    });
+    document.getElementById('task8').textContent = result8;
+
+    // Task 9
+    let squaredArray = [];
+    moreNumbers.forEach(num => {
+      squaredArray.push(num * num);
+    });
+    document.getElementById('task9').textContent = `Squares: ${squaredArray.join(', ')}`;
+
+    // Task 10
+    const person = {
+      name: "Pratikshya",
+      age: 23,
+      city: "Kathmandu"
+    };
+    let result10 = '';
+    for (let key in person) {
+      result10 += `${key}: ${person[key]}\n`;
+    }
+    document.getElementById('task10').textContent = result10;
+  </script>
+</body>
+</html>
 
